@@ -151,7 +151,7 @@ fsck_ffs -p /dev/r${BOOTDISK}a
 # update MBR label
 echo Updating NetBSD partition size in MBR label...
 fdisk -f -u -b ${MBRCYLINDERS}/${BHEAD}/${BSEC} \
-    -0 -s ${PART1ID}/${FSOFFSET}/${BSDPARTSECTORS} \
+    -1 -s ${PART1ID}/${FSOFFSET}/${BSDPARTSECTORS} \
     ${BOOTDISK}
 
 # write updated disklabel
