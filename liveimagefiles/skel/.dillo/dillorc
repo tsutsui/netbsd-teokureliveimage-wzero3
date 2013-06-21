@@ -56,11 +56,11 @@ geometry=600x400
 #font_cursive="URW Chancery L"
 #font_fantasy="DejaVu Sans"
 #font_monospace="DejaVu Sans Mono"
-font_serif="VL Pゴシック"
-font_sans_serif="VL Pゴシック"
-font_cursive="VL Pゴシック"
-font_fantasy="VL Pゴシック"
-font_monospace="VL ゴシック"
+font_serif="VL PGothic"
+font_sans_serif="VL PGothic"
+font_cursive="VL PGothic"
+font_fantasy="VL PGothic"
+font_monospace="VL Gothic"
 #
 # Otherwise, use bitmapped fonts like the following (for a list, try running
 # "xlsfonts -fn *-iso10646-1 | grep -v -e -0-0 | cut -d - -f 3 | sort | uniq").
