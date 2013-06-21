@@ -1,5 +1,4 @@
 #! /bin/sh
-# $Id: inst.sh,v 1.10 2012/03/10 15:32:06 tsutsui Exp tsutsui $
 
 MACHINE_ARCH=`uname -p`
 MACHINE=`uname -m`
@@ -38,14 +37,16 @@ PACKAGES=" \
 	"
 
 #echo "mounting target disk image..."
-#mount -o async ${ROOTFSDEV} /
+mount -o async ${ROOTFSDEV} /
 
 #echo "copying local /etc settings..."
 #cp ${FILEDIR}/etc.${MACHINE}/ttys /etc
 
+# copy typical mk.conf file
+cp ${FILEDIR}/etc/mk.conf /etc
+
 echo "installing packages..."
-#PACKAGESDIR=${FILEDIR}/packages/${MACHINE_ARCH}/All
-PACKAGESDIR=${FILEDIR}/All
+PACKAGESDIR=${FILEDIR}/packages/${MACHINE_ARCH}/All
 (cd ${PACKAGESDIR}; PKG_RCD_SCRIPTS=YES pkg_add $PACKAGES)
 
 # set ibus-anthy as system default
