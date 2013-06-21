@@ -134,7 +134,7 @@ FILESDIR=files
 TARGETROOTDIR=targetroot.${MACHINE}
 DOWNLOADDIR=download.${MACHINE}
 WORKDIR=work.${MACHINE}
-IMAGE=${WORKDIR}/liveimage-${REVISION}.img
+IMAGE=${WORKDIR}/liveimage-wzero3-SD-${REVISION}.img
 
 #
 # target image size settings
